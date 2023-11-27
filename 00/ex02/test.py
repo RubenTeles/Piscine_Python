@@ -17,4 +17,4 @@ print(all_thing_is_obj(10))
 # Dict : <class 'dict'>$
 # Brian is in the kitchen : <class 'str'>$
 # Type not found$
-# 42$
+# 42$		
