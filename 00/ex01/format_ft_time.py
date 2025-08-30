@@ -1,8 +1,4 @@
-# format_ft_time.py
-import time
 from datetime import datetime
-
-
 
 #Seconds since January 1, 1970: 1,666,355,857.3622 or 1.67e+09 in scientific notation$
 
@@ -28,5 +24,3 @@ print(current_date.strftime(format_date))
 # %A: Nome completo do dia da semana (Sunday, Monday, Tuesday, etc.).
 # %b: Abreviação do nome do mês (Jan, Feb, Mar, etc.).
 # %B: Nome completo do mês (January, February, March, etc.).
-
-# time.time() daria o tempo em segundos desde 1/1/1970
