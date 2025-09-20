@@ -12,8 +12,7 @@ def NULL_not_found(object: any) -> int:
 			print("Fake :", object, type(object))
 		else:
 			raise ValueError("Type not Found")
+		return 0
 	except Exception as e:
 		print(e)
 		return 1
-	else:
-		return 0
