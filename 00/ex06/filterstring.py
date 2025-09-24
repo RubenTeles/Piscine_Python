@@ -1,26 +1,29 @@
 import sys
 from ft_filter import ft_filter
 
+
 def main():
-	arguments = sys.argv
+    try:
+        arguments = sys.argv
+        if (len(arguments) == 3):
+            try:
+                text = sys.argv[1]
+                number = int(sys.argv[2])
 
-	if (len(arguments) == 3):
-		try:
-			text = sys.argv[1]
-			number = int(sys.argv[2])
+                ft_list = text.split(' ')
 
-			ft_list = text.split(' ')
-     
-			# print(ft_filter.__doc__)
-			print(list(ft_filter(lambda x: len(x) > number, ft_list)))
-		except ValueError:
-			print("AssertionError: the arguments are bad")
-			return
-	else:
-		print("AssertionError: the arguments are bad")
+                # print(ft_filter.__doc__)
+                print(list(ft_filter(lambda x: len(x) > number, ft_list)))
+            except ValueError:
+                raise AssertionError("the arguments are bad")
+        else:
+            raise AssertionError("the arguments are bad")
+    except AssertionError as error:
+        print("AssertionError:", error)
+
 
 if __name__ == "__main__":
-	main()
+    main()
 
 # print("---------------- Correct Result:")
 # print(filter.__doc__)
