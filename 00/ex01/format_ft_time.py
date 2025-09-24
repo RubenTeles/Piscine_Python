@@ -7,14 +7,18 @@ first_date = datetime(1970, 1, 1)
 current_date = datetime.now()
 
 seconds = (current_date - first_date).total_seconds()
-scientific_notation = "{:e}".format(seconds)
+
+# formats
+formatted_seconds = "{:,.4f}".format(seconds)
+scientific_notation = "{:.2e}".format(seconds)
 
 # NOV 27 2023
 format_date = "%b %d %Y"
 string_date = "Seconds since January 1, 1970:"
-string_date_end = " in scientific notation"
+string_date_end = "in scientific notation"
 
-print(string_date, seconds, "or", scientific_notation, string_date_end)
+print(string_date, formatted_seconds, "or\
+", scientific_notation, string_date_end)
 print(current_date.strftime(format_date))
 
 # %Y: Ano com quatro dígitos (ex: 2023).

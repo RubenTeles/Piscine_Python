@@ -22,9 +22,7 @@ def main(argv):
                 number = int(sys.argv[1])
                 print(whatis(number))
             except Exception:
-                raise AssertionError("argument is not an integer\n")
-        else:
-            print()
+                raise AssertionError("argument is not an integer")
     except AssertionError as error:
         print("AssertionError:", error)
 
